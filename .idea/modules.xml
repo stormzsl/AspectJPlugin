@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AspectJPlugin.iml" filepath="$PROJECT_DIR$/AspectJPlugin.iml" group="AspectJPlugin" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="AspectJPlugin/app" />
+      <module fileurl="file://$PROJECT_DIR$/base_aspectj_module/base_aspectj_module.iml" filepath="$PROJECT_DIR$/base_aspectj_module/base_aspectj_module.iml" group="AspectJPlugin/base_aspectj_module" />
     </modules>
   </component>
 </project>

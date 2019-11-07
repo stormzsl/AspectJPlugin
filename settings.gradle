@@ -1,2 +1,3 @@
 rootProject.name='AspectJPlugin'
 include ':app'
+include ':base_aspectj_module'
