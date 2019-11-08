@@ -29,7 +29,8 @@ aspectjx {
 //    excludeJarFilter 'universal-image-loader'
 
     //排除所有package路径中包含`android.support`的class文件及库（jar文件）
-
+    //    exclude 'com.android.aspectj.test'
+    //    exclude 'com.android.aspectj.plugin'
     exclude 'android.support'
 }
 
