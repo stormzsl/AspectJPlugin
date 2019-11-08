@@ -9,10 +9,8 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.0-alpha04'
 
-        classpath 'org.aspectj:aspectjweaver:1.8.9'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        //1.AspectJ配置依赖的
+        classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.0'
     }
 }
 
@@ -24,13 +22,13 @@ allprojects {
     }
 
 }
-
-subprojects { Project project ->
-    apply plugin: project.name.equalsIgnoreCase("app") ? 'com.android.application' : 'com.android.library'
-    dependencies {
-        implementation 'org.aspectj:aspectjrt:1.8.9'
-    }
-}
+//可以通过这种方式实现所有module依赖同一aar/jar第三方库
+//subprojects { Project project ->
+//    apply plugin: project.name.equalsIgnoreCase("app") ? 'com.android.application' : 'com.android.library'
+//    dependencies {
+//        implementation 'org.aspectj:aspectjrt:1.8.9'
+//    }
+//}
 
 task clean(type: Delete) {
     delete rootProject.buildDir

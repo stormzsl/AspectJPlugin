@@ -1,4 +1,4 @@
-//apply plugin: 'com.android.library'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 28
@@ -30,4 +30,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //使用api指令等同于老版本的compile,外部module引用该module，也会访问到该module依赖的第三方库aar,jar，若要避免依赖使用implementation
+//    api 'org.aspectj:aspectjrt:1.8.9'
+    //3.AspectJ配置依赖的
+    implementation 'org.aspectj:aspectjrt:1.8.9'
+
 }

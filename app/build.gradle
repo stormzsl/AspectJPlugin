@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+//2.AspectJ配置依赖的
+apply plugin: 'android-aspectjx'
+
 
 android {
     compileSdkVersion 28
@@ -18,6 +21,18 @@ android {
     }
 }
 
+//支持include和exclude加快编译速度
+aspectjx {
+//    //织入遍历符合条件的库
+//    includeJarFilter 'universal-image-loader', 'AspectJX-Demo/library'
+//    //排除包含‘universal-image-loader'的库
+//    excludeJarFilter 'universal-image-loader'
+
+    //排除所有package路径中包含`android.support`的class文件及库（jar文件）
+
+    exclude 'android.support'
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
@@ -25,5 +40,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
+    implementation project(path: ':base_aspectj_module')
 }
