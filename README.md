@@ -6,3 +6,5 @@ AspectJ实现统计耗时，异常处理，日志统计等
 
 # 查看project中指定module的第三方库的依赖详情:
 ./gradlew app:dependencies
+
+# 参考(Aspectj使用)[https://blog.csdn.net/zlmrche/article/details/79643801]

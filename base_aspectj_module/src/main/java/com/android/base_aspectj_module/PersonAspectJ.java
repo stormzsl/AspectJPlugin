@@ -1,10 +1,15 @@
 package com.android.base_aspectj_module;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.reflect.MethodSignature;
+
+import java.lang.reflect.Method;
 
 /**
  * 作者:created by storm on 2019-11-08
@@ -24,12 +29,20 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class PersonAspectJ {
 
-    @Pointcut("execution(* *.set*(..))")
+    @Pointcut("execution(* com.android.aspectj.plugin.Person.set*(..))")
     public void callPersonSetNameMethod(){}
 
     @After("callPersonSetNameMethod()")
     public void invokeCallPersonSetNameMethodBefore(JoinPoint point){
-        System.out.println("invokeCallPersonSetNameMethodBefore before");
+        Signature signature=point.getSignature();
+        if(signature instanceof MethodSignature){
+            String name=signature.getName();
+            Method method=((MethodSignature) signature).getMethod();
+            method.setAccessible(true);
+            String methodName=method.getName();
+            String className=method.getDeclaringClass().getName();
+            System.out.println("before:name:"+name+"::methodName:"+methodName+"::className:"+className);
+        }
 
     }
 }

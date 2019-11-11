@@ -23,6 +23,7 @@ android {
 
 //支持include和exclude加快编译速度
 aspectjx {
+    enabled true
 //    //织入遍历符合条件的库
 //    includeJarFilter 'universal-image-loader', 'AspectJX-Demo/library'
 //    //排除包含‘universal-image-loader'的库
@@ -31,7 +32,7 @@ aspectjx {
     //排除所有package路径中包含`android.support`的class文件及库（jar文件）
     //    exclude 'com.android.aspectj.test'
     //    exclude 'com.android.aspectj.plugin'
-    exclude 'android.support'
+    exclude 'android.support','com.google'
 }
 
 dependencies {
