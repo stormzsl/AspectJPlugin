@@ -46,4 +46,6 @@ dependencies {
 
 //    implementation project(':MethodConsumeLibrary')
     implementation 'com.aspectj.method.consume:MethodConsumeLibrary:1.0.0'
+//    implementation project(path: ':ActivitySetContentViewCost')
+
 }

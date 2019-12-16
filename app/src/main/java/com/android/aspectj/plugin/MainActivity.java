@@ -11,12 +11,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Person person=new Person();
-        person.setName("test person");
-
-        TestInclude testInclude=new TestInclude();
-        testInclude.setPwd("test pwd");
-
+//        Person person=new Person();
+//        person.setName("test person");
+//
+//        TestInclude testInclude=new TestInclude();
+//        testInclude.setPwd("test pwd");
         MethodConsumeTest methodConsumeTest=new MethodConsumeTest();
         methodConsumeTest.testString();
         methodConsumeTest.testStringBuilder();

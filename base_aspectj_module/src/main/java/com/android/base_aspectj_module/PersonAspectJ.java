@@ -1,6 +1,9 @@
 package com.android.base_aspectj_module;
 
+import android.util.Log;
+
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Around;
