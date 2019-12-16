@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 //2.AspectJ配置依赖的
 apply plugin: 'android-aspectjx'
-
+apply plugin:'com.method.consume.plugin'
 
 android {
     compileSdkVersion 28

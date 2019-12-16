@@ -5,12 +5,18 @@ buildscript {
         google()
         jcenter()
 
+        maven {
+            url 'http://127.0.0.1:8081/nexus/content/repositories/maven-release/'
+        }
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.0-alpha04'
 
         //1.AspectJ配置依赖的
         classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.0'
+
+        classpath 'com.method.consume:plugin:1.1.0'
     }
 }
 
