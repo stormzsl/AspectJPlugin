@@ -1,3 +1,5 @@
 rootProject.name='AspectJPlugin'
 include ':app'
 include ':base_aspectj_module'
+include ':MethodConsumeAnnotation'
+include ':MethodConsumeLibrary'

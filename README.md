@@ -18,4 +18,12 @@ AspectJ实现统计耗时，异常处理，日志统计等,[Aspectj使用](https
 
 3.在主工程app或者subProject中添加dependency依赖:implementation 'org.aspectj:aspectjrt:1.8.9'
 ```
+###### 基于Aspectj统计耗时的使用步骤:
+```text
+1.在根工程的build.gradle中添加AspectJ依赖插件: classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.0'
+
+2.在主工程app或者subProject中添加插件依赖:apply plugin: 'android-aspectjx'
+
+3.在主工程app或者subProject中添加dependency依赖:implementation 'com.aspectj.method.consume:MethodConsumeLibrary:1.0.0'
+```
 

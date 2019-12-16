@@ -17,13 +17,22 @@ buildscript {
         classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.0'
 
         classpath 'com.method.consume:plugin:1.1.0'
+
+        //bintrayjcenterlibrary需要
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
     }
 }
 
 allprojects {
     repositories {
+
+        maven {
+            url 'https://dl.bintray.com/fastenorg/apsectJProject'
+        }
         google()
         jcenter()
+
 
     }
 

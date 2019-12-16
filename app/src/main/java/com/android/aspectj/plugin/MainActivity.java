@@ -16,5 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
         TestInclude testInclude=new TestInclude();
         testInclude.setPwd("test pwd");
+
+        MethodConsumeTest methodConsumeTest=new MethodConsumeTest();
+        methodConsumeTest.testString();
+        methodConsumeTest.testStringBuilder();
     }
 }
